@@ -4,13 +4,13 @@
         <Console name="Console" target="SYSTEM_OUT">
             <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout
-                    pattern="%d{HH:mm:ss.SSS} %highlight{%-5level} %class{36} [%t] %-5M - %blue{%msg%xEx%n}"
+                    pattern="%d{HH:mm:ss.SSS} %-5level %class{36} [%t] %-5M - %msg%xEx%n"
                     disableAnsi="false"
             />
         </Console>
         <File name="log" fileName="target/test_log4j2.log" append="false">
             <PatternLayout
-                    pattern="%d{HH:mm:ss.SSS} %highlight{%-5level} %class{36} [%t] %-5M - %blue{%msg%xEx%n}"
+                    pattern="%d{HH:mm:ss.SSS} %-5level %class{36} [%t] %-5M - %msg%xEx%n"
                     disableAnsi="false"
             />
         </File>
