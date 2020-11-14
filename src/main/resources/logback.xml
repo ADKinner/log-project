@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appender name="file" class="ch.qos.logback.core.FileAppender">
+        <File>target/test_logback.log</File>
+        <Encoder>
+            <Pattern>
+                %d{HH:mm:ss.SSS} %-5level %class{36} [%t] %-5M - %msg%xEx%n
+            </Pattern>
+        </Encoder>
+    </Appender>
+    <Appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <Encoder>
+            <Pattern>
+                %d{HH:mm:ss.SSS} %highlight(%-5level) %cyan(%class{36}) [%t] %-5M - %blue(%msg%xEx%n)
+            </Pattern>
+        </Encoder>
+    </Appender>
+    <Root level="debug">
+        <Appender-Ref ref="console"/>
+    </Root>
+    <Root level="trace">
+        <Appender-Ref ref="file"/>
+    </Root>
+</Configuration>
